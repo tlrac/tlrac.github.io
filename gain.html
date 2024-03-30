@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>学习收获</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* body 样式 */
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .outer {
+            background: url('.\\素材\\1.png') no-repeat center center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            /* 只需要给背景图加上该属性即可 */
+            background-attachment: fixed;
+        }
+
+        /* 标题 */
+        .header {
+            padding: 80px;
+            text-align: center;
+
+            color: white;
+            background-size: cover;
+        }
+
+        /* 标题字体加大 */
+        .header h1 {
+            font-size: 40px;
+        }
+
+        /* 导航 */
+        .navbar {
+            overflow: hidden;
+            background-color: #514f4f;
+        }
+
+        /* 导航栏样式 */
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* 鼠标移动到链接的颜色 */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* 主要的内容区域 */
+        .main {
+            -ms-flex: 70%;
+            /* IE10 */
+            flex: 70%;
+            background-color: rgba(242, 247, 244, 0.656);
+            padding: 20px 350px;
+        }
+
+
+        /* 底部 */
+        .footer {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .footer a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        #btn {
+            display: block;
+            background-color: dodgerblue;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            width: 75px;
+            height: 30px;
+            border: 0;
+            font-size: 16px;
+            border-radius: 30px;
+        }
+
+        #btn:hover {
+            background-color: #3d7ddf;
+        }
+
+        #result {
+            display: none;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        label {
+            font-size: 20px;
+            font-family: 仿宋;
+        }
+
+        input {
+            font-size: 20px;
+            font-family: 仿宋;
+        }
+
+        input[type=text] {
+            width: 700px;
+            height: 250px;
+        }
+
+        /*聚焦*/
+        input[type=text]:focus {
+            border: 3px solid #555;
+        }
+
+        /* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+        @media screen and (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        /* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+        @media screen and (max-width: 400px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer">
+        <div class="header">
+            <h1>陪族叔刑部侍郎晔及中书贾舍人至游洞庭五首·其二</h1>
+            <br>
+            <p>【唐】 李白</p>
+        </div>
+
+        <div class="navbar">
+            <a href="wangye.html">课堂教学</a>
+            <a href="author.html">作者背景</a>
+            <a href="test.html">练习测试</a>
+            <a href="gain.html">学习收获</a>
+            <a href="reflect.html">学生反馈</a>
+        </div>
+
+        <div class="main">
+            <h2>通过此次学习，你收获到了什么？</h2>
+            <form action="./gain.html" method="post">
+                <textarea cols="50" rows="20" required> </textarea>
+                <input type="button" id="btn" value="提交" />
+                <div id="result">
+                    提交成功！
+                </div>
+            </form>
+            <script>
+                var btn = document.getElementById('btn');
+                btn.onclick = function () {
+                    result.style.display = 'block';
+                }
+            </script>
+        </div>
+
+        <div class="footer">
+            <a href="#">教学设计</a>
+            <a href="#">教学反思</a>
+            <a href="#">关于我们</a>
+            <a href="#">联系方式</a>
+            <a href="#">教师点评</a>
+        </div>
+    </div>
+</body>
+
+</html>
